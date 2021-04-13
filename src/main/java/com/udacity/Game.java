@@ -151,7 +151,70 @@ public class Game {
     public String checkGameWinner(char [][]grid){
         String result = "None";
         //Student code goes here ...
-        return result;
+        if (grid[0][0] == grid[0][1] && grid[0][1] == grid[0][2]) {
+            if (grid[0][0] == 'x') {
+                return "X wins";
+            } else if (grid[0][0] == 'o') {
+                return "O wins";
+            }
+        }
+        if (grid[0][0] == grid[1][0] && grid[1][0] == grid[2][0]) {
+            if (grid[0][0] == 'x') {
+                return "X wins";
+            } else if (grid[0][0] == 'o') {
+                return "O wins";
+            }
+        }
+        if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2]) {
+            if (grid[0][0] == 'x') {
+                return "X wins";
+            } else if (grid[0][0] == 'o') {
+                return "O wins";
+            }
+        }
+        if (grid[0][1] == grid[1][1] && grid[1][1] == grid[2][1]) {
+            if (grid[0][1] == 'x') {
+                return "X wins";
+            } else if (grid[0][1] == 'o') {
+                return "O wins";
+            }
+        }
+        if (grid[0][2] == grid[1][2] && grid[1][2] == grid[2][2]) {
+            if (grid[0][2] == 'x') {
+                return "X wins";
+            } else if (grid[0][2] == 'o') {
+                return "O wins";
+            }
+        }
+        if (grid[0][2] == grid[1][1] && grid[1][1] == grid[2][0]) {
+            if (grid[0][2] == 'x') {
+                return "X wins";
+            } else if (grid[0][2] == 'o') {
+                return "O wins";
+            }
+        }
+        if (grid[1][0] == grid[1][1] && grid[1][1] == grid[1][2]) {
+            if (grid[1][0] == 'x') {
+                return "X wins";
+            } else if (grid[1][0] == 'o') {
+                return "O wins";
+            }
+        }
+        if (grid[2][0] == grid[2][1] && grid[2][1] == grid[2][2]) {
+            if (grid[2][0] == 'x') {
+                return "X wins";
+            } else if (grid[2][0] == 'o') {
+                return "O wins";
+            }
+        }
+        for (int i = 0;i < 3;i++) {
+            for (int j = 0;j < 3;j++) {
+                if (grid[i][j] == '-') {
+                    return "none";
+                }
+            }
+        }
+        return "Tie";
     }
 
     /**
